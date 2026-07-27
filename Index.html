@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Todo App</title>
+  <style>
+    body { font-family: Arial; background: gold; padding: 20px; text-align: center; }
+    input, button { padding: 10px; margin: 5px; border-radius: 8px; border: none; }
+    button { background: black; color: gold; }
+  </style>
+</head>
+<body>
+  <h1>🎵 My Music Studio Todo</h1>
+  <input id="task" placeholder="Add a task...">
+  <button onclick="addTask()">Add</button>
+  <ul id="list"></ul>
+
+  <script>
+    function addTask() {
+      let task = document.getElementById("task").value;
+      if(task) {
+        let li = document.createElement("li");
+        li.textContent = task;
+        document.getElementById("list").appendChild(li);
+        document.getElementById("task").value = "";
+      }
+    }
+  </script>
+</body>
+</html>
